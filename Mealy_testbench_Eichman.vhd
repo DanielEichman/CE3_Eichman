@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 -- Company: 
--- Engineer:
+-- Engineer: Daniel Eichmnan
 --
 -- Create Date:   21:13:11 03/06/2014
 -- Design Name:   
@@ -8,22 +8,7 @@
 -- Project Name:  CE3_Eichman
 -- Target Device:  
 -- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: MealyElevatorController_Shell
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
+-- Description:  Test bench for MealyElevatorController
 --------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -38,7 +23,7 @@ END Mealy_testbench_Eichman;
 ARCHITECTURE behavior OF Mealy_testbench_Eichman IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
- 
+
     COMPONENT MealyElevatorController_Shell
     PORT(
          clk : IN  std_logic;
@@ -85,7 +70,9 @@ BEGIN
 		wait for clk_period/2;
    end process;
  
-
+-------
+-- Will loop though all the floors
+-------
    -- Stimulus process
    stim_proc: process
    begin		

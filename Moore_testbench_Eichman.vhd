@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 -- Company: USAFA/DFEC
--- Engineer: EICHMAN
+-- Engineer: Daniel Eichman
 -- 
 -- Create Date:    	10:33:47 07/07/2012 
 -- Design Name:		Moore_testbench_Eichman
@@ -32,7 +32,6 @@ ARCHITECTURE behavior OF Moore_testbench_Eichman IS
         );
     END COMPONENT;
     
-
    --Inputs
    signal clk : std_logic := '0';
    signal reset : std_logic := '0';
@@ -64,7 +63,9 @@ BEGIN
 		clk <= '1';
 		wait for clk_period/2;
    end process;
- 
+ --------
+ -- This loops from floor 1 to floor 4 then goes straight back to floor 1
+ --------
 
    -- Stimulus process
    stim_proc: process

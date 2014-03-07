@@ -1,34 +1,15 @@
 ----------------------------------------------------------------------------------
 -- Company: USAFA/DFEC
--- Engineer: Silva
+-- Engineer: Daniel Eichman
 -- 
 -- Create Date:    10:33:47 07/07/2012 
 -- Design Name: 
--- Module Name:    MooreElevatorController_Silva - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
+-- Module Name:    MooreElevatorController - Behavioral 
+-- Description: Mealy Elevator COntroller with two outputs of floor and next floot
+
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity MealyElevatorController_Shell is
     Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
@@ -116,11 +97,13 @@ end process;
 --Code your Ouput Logic for your Mealy machine below
 --Remember, now you have 2 outputs (floor and nextfloor)
 -----------------------------------------------------------
+-- Below is the same as the Moore machine
 floor <= "0001" when (floor_state = floor1) else
 			"0010" when (floor_state = floor2) else
 			"0011" when (floor_state = floor3) else
 			"0100" when (floor_state = floor4) else
 			"0001";
+-- This is the Mealy part as next floor depends on current floor and direction of travel
 nextfloor <= "0001" when (floor_state = floor2 and up_down = '0') else
 				 "0010" when (floor_state = floor1 and up_down = '1') else
 				 "0010" when (floor_state = floor3 and up_down = '0') else
