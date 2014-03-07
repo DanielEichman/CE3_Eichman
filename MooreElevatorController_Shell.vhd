@@ -70,6 +70,7 @@ begin
 					--otherwise we're going to stay at floor2
 					else
 						floor_state <= floor2;
+						
 					end if;
 				
 --COMPLETE THE NEXT STATE LOGIC ASSIGNMENTS FOR FLOORS 3 AND 4
