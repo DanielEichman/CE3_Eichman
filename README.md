@@ -37,4 +37,5 @@ Period: 10 ns, therefore the frequency is 100MHz
 ######What value would we set to simulate a 50MHz clock?
 
 20ns.
-
+###Doucumentation 
+I refernced the provided code. Also C3C Sean Bapty helped me undstand the clock and how it works. 
