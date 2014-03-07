@@ -20,21 +20,21 @@ The results for floor are exactly the same as the Moore machine so they should b
 ###README (20 pts) containing:
 
 ####Moore's Questions
-######--Question: is reset synchronous or asynchronous?
+######Is reset synchronous or asynchronous?
 
 Synchronous. As the process's sensitivity list only contains "clk".
 ####Mealy’s Questions
---Question: Will it (next-state process) be different from your Moore Machine?
+######Will it (next-state process) be different from your Moore Machine?
 No. It should be exactly the same as the elevator will move in the exact same manner.
 
---Question: is reset synchronous or asynchronous?
+######Is reset synchronous or asynchronous?
 Synchronous. As the process's sensitivity list only contains "clk".
 ####Lab handout Questions
-What is the clock frequency? 
+######What is the clock frequency? 
 
 Period: 10 ns, therefore the frequency is 100MHz
 
-What value would we set to simulate a 50MHz clock?
+######What value would we set to simulate a 50MHz clock?
 
 20ns.
 
