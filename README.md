@@ -18,5 +18,21 @@ This test bench is almost exactly the same as Moore_testbench_Eichman.vhd. The m
 The results for floor are exactly the same as the Moore machine so they should be correct. Notice that during the first 40ns (while the elevator is on first), if up_down is 0 (moving down) nextfloor displays first but once the direction changes the nextfloor also changes to second. Where the time marker (yellow line) is the elevator is on fourth and the direction changes to move down at that time nextfloor changes to third. 
 
 ###README (20 pts) containing:
-- Explanation of testbench results for Mealy and Moore Machines (why are they correct?)
-- Answers to questions in this document and in the VHDL shell comments	
+
+####Moore's Questions
+--Question: is reset synchronous or asynchronous?
+
+Synchrounous. As the process's senstivitly list only contains "clk".
+####Mealy's Questions
+--Question: Will it (next-state process) be different from your Moore Machine?
+No. It should be exacally the same as the evelvator will move in the exact same manner.
+
+--Question: is reset synchronous or asynchronous?
+Synchrounous. As the process's senstivitly list only contains "clk".
+####Lab handout Questions
+What is the clock frequency? 
+Period: 10 ns, therefore the frequency is 100MHz
+
+What value would we set to simulate a 50MHz clock?
+
+100ns.
