@@ -20,7 +20,7 @@ The results for floor are exactly the same as the Moore machine so they should b
 ###README (20 pts) containing:
 
 ####Moore's Questions
---Question: is reset synchronous or asynchronous?
+######--Question: is reset synchronous or asynchronous?
 
 Synchronous. As the process's sensitivity list only contains "clk".
 ####Mealy’s Questions
